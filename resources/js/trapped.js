@@ -1,14 +1,11 @@
-const canvas = document.querySelector('canvas');
+const canvas = document.querySelector('#trapped');
 const context = canvas.getContext('2d');
 
-const size = window.innerWidth;
-const dpr = window.devicePixelRatio;
+const size = 1080;
+let step = 54;
 
-let step = 20;
-
-canvas.width = size //* dpr;
-canvas.height = size //* dpr;
-//context.scale(dpr, dpr);
+canvas.width = size;
+canvas.height = size;
 
 context.lineCap = 'square';
 context.lineWidth = 2;
