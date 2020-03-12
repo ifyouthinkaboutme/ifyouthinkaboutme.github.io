@@ -1,4 +1,4 @@
-const canvas = document.querySelector('#trapped');
+const canvas = document.getElementById('trapped');
 const context = canvas.getContext('2d');
 
 const size = 1080;
