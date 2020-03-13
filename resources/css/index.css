@@ -3,6 +3,9 @@
 }
 
 canvas {
-    border: 2px solid black;
     display: block;
+}
+
+#trapped {
+    border: 2px solid black;
 }

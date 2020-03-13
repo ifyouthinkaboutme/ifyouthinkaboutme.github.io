@@ -2,7 +2,7 @@ const canvas = document.getElementById('pulse');
 const context = canvas.getContext('2d');
 
 const size = 500;
-let step = size / 25;
+let step = size / 50;
 let lines = [];
 
 canvas.width = size;
@@ -16,7 +16,7 @@ for (let i = 0; i <= size; i += step) {
     for (let j = 0; j <= size; j += step) {
         
         let distanceToCenter = Math.abs(j - size / 2);
-        let variance = Math.max(size / 2 - 50 - distanceToCenter, 0);
+        let variance = Math.max(size / 2 - 100 - distanceToCenter, 0);
 
         let random = Math.random() * variance / 2 * -1;
 
@@ -26,7 +26,7 @@ for (let i = 0; i <= size; i += step) {
     lines.push(line);
 }
 
-for (let i = 5; i < lines.length; i++) {
+for (let i = 10; i < lines.length; i++) {
     
     context.beginPath();
     context.moveTo(lines[i][0].x, lines[i][0].y);

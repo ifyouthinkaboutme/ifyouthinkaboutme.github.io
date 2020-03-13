@@ -2,7 +2,7 @@ const canvas = document.getElementById('trapped');
 const context = canvas.getContext('2d');
 
 const size = 500;
-let step = size/10;
+let step = size / 10;
 
 canvas.width = size;
 canvas.height = size;
