@@ -2,10 +2,35 @@
     margin: 0 auto;
 }
 
+header {
+    background-color: #f53b57;
+    font-family: "Montserrat", sans-serif;
+    color: #34e7e4;
+    padding: 5% 10%;
+}
+
+main {
+    background-color: #ef5777;
+    font-family: "Work Sans", sans-serif;
+    color: #00d8d6;
+    padding: 10%;
+}
+
+a {
+    color: #00d8d6;
+}
+
 canvas {
     display: block;
 }
 
 #trapped {
     border: 2px solid black;
+}
+
+footer {
+    background-color: #f53b57;
+    font-family: "Work Sans", sans-serif;
+    color: #34e7e4;
+    padding: 2% 10%;
 }

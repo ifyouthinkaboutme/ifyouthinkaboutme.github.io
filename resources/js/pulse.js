@@ -1,7 +1,7 @@
 const canvas = document.getElementById('pulse');
 const context = canvas.getContext('2d');
 
-const size = 500;
+const size = window.innerWidth - (window.innerWidth / 10) * 2;
 let step = size / 50;
 let lines = [];
 
