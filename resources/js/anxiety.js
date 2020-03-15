@@ -19,8 +19,8 @@ function draw(width, height) {
     context.stroke(); 
   }
 
-for (let i = step; i <= size - step; i += step) {
-    for (let j = step; j <= size - step; j += step) {
+for (let i = step; i <= size - step / 2; i += step) {
+    for (let j = step; j <= size - step / 2; j += step) {
         
         let plusOrMinus = Math.random() > 0.5 ? 1 : -1;
         let translateAmt = j / size * plusOrMinus * Math.random() * randomDisplacement;
