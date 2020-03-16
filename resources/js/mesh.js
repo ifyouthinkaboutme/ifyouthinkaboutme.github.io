@@ -19,7 +19,7 @@ for (let i = 0; i <= size; i += step) {
         line.push({x: j, y: i});
         
         context.beginPath();
-        context.arc(j, i, 1, 0, 2 * Math.PI, true);
+        context.arc(j, i, 2, 0, 2 * Math.PI, true);
         context.fill();
     }
     lines.push(line);
