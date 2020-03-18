@@ -11,7 +11,7 @@ canvas.width = size;
 canvas.height = size;
 
 context.lineCap = 'square';
-context.lineWidth = 2;
+context.lineWidth = 1;
 
 function draw(width, height) {
     context.beginPath();
