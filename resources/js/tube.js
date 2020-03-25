@@ -11,6 +11,7 @@ context.lineWidth = 2;
 context.moveTo(20,20);
 context.lineTo(40,40);
 context.stroke();
+
 context.moveTo(100,120)
 context.lineTo(60,60);
 context.stroke();
