@@ -19,7 +19,6 @@ function draw (x, y, width, height, positions) {
     context.rotate(Math.random() * 5);
     context.translate(-width/2, -height/2);
 
-
     for (let i = 0; i <= positions.length; i++) {
         context.beginPath();
         context.moveTo(positions[i] * width, 0);
