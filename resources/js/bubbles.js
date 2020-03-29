@@ -6,6 +6,7 @@ const height = width;
 
 canvas.width = width;
 canvas.height = height;
+context.lineWidth = 2;
 
 let circles = [];
 
@@ -38,7 +39,6 @@ function Circle (x, y, dx, dy, r, g, b, radius) {
             this.dy = -this.dy;
         }
 
-
         // update variable
         this.x += this.dx;
         this.y += this.dy;
@@ -50,19 +50,19 @@ function Circle (x, y, dx, dy, r, g, b, radius) {
 
 for (i = 0; i < 100; i++) {
     // fixed radius value
-    let radius = 30;
+    let radius = Math.random() * (width / 20);
     
     // randomize starting position
     let x = Math.random() * (width - radius * 2) + radius;
     let y = Math.random() * (height - radius * 2) + radius;
 
     // fixed velocity values
-    let dx = (Math.random() - 0.5) * 2;
-    let dy = (Math.random() - 0.5) * 2;;
+    let dx = (Math.random() - 0.5) * 1;
+    let dy = (Math.random() - 0.5) * 1;
 
     // randomize color
-    let r = Math.floor(Math.random() * 10);
-    let g = Math.floor(Math.random() * 100);
+    let r = Math.floor(Math.random() * 0);
+    let g = Math.floor(Math.random() * 255);
     let b = Math.floor(Math.random() * 255);
 
     let circle = new Circle(x, y, dx, dy, r, g, b, radius);
