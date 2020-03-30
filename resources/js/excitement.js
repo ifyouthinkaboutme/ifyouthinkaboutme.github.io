@@ -21,9 +21,8 @@ let colors = [
     '#D66C17'
 ];
 
-//,,#A53D10,,,#1C0203,#582D1A,#A53D10
-
 let maxRadius = width / 10;
+let rect = canvas.getBoundingClientRect();
 
 // Circle object definition
 function Circle (x, y, dx, dy, radius) {
@@ -88,20 +87,20 @@ function animate() {
 
 // add mouse listener
 window.addEventListener('mousemove', function(event) {
-    mouse.x = event.x - canvas.getBoundingClientRect().left;
-    mouse.y = event.y - canvas.getBoundingClientRect().top;
+    mouse.x = (event.x - rect.left) / (rect.right - rect.left) * canvas.width;
+    mouse.y = (event.y - rect.top) / (rect.bottom - rect.top) * canvas.height;
 });
 
 // add touch listener
 window.addEventListener('touchmove', function(event) {
-    mouse.x = event.x - canvas.getBoundingClientRect().left;
-    mouse.y = event.y - canvas.getBoundingClientRect().top;
+    mouse.x = (event.x - rect.left) / (rect.right - rect.left) * canvas.width;
+    mouse.y = (event.y - rect.top) / (rect.bottom - rect.top) * canvas.height;
 });
 
 // create the circles
-for (i = 0; i < 200; i++) {
+for (i = 0; i < 400; i++) {
     // fixed radius value
-    let radius = Math.floor(Math.random() * (width / 20));
+    let radius = Math.floor(Math.random() * (width / 30));
     console.log(radius);
     // randomize starting position
     let x = Math.random() * (width - radius * 2) + radius;
