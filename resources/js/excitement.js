@@ -21,7 +21,7 @@ let colors = [
     '#D66C17'
 ];
 
-let maxRadius = width / 10;
+let maxRadius = width / 8;
 let rect = canvas.getBoundingClientRect();
 
 // Circle object definition
@@ -60,7 +60,7 @@ function Circle (x, y, dx, dy, radius) {
         // interactive part
         if (mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
             if (this.radius < maxRadius) {
-                this.radius += 1;
+                this.radius += 4;
             }
         }
         else if (this.radius > this.minRadius) {
