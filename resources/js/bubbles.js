@@ -10,22 +10,20 @@ context.lineWidth = 2;
 
 let circles = [];
 
-function Circle (x, y, dx, dy, r, g, b, radius) {
+function Circle (x, y, dx, dy, color, radius) {
     // assign values
     this.x = x;
     this.y = y;
     this.dx = dx;
     this.dy = dy;
-    this.r = r;
-    this.g = g;
-    this.b = b;
+    this.color = color;
     this.radius = radius; 
     
     // draw circle
     this.draw = function () {
         context.beginPath();
         context.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        context.strokeStyle = `rgb(${this.r},${this.g},${this.b})`;
+        context.strokeStyle = `rgb(${this.color},${this.color},${this.color})`;
         context.stroke();
     }
 
@@ -61,11 +59,9 @@ for (i = 0; i < 100; i++) {
     let dy = (Math.random() - 0.5) * 1;
 
     // randomize color
-    let r = Math.floor(Math.random() * 0);
-    let g = Math.floor(Math.random() * 255);
-    let b = Math.floor(Math.random() * 255);
+    let color = Math.floor(Math.random() * 255);
 
-    let circle = new Circle(x, y, dx, dy, r, g, b, radius);
+    let circle = new Circle(x, y, dx, dy, color, radius);
     circles.push(circle);
 }
 
