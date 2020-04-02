@@ -14,11 +14,18 @@ let offset = 2;
 let tileStep = (size - offset * 2) / 7;
 let startSize = tileStep;
 let directions = [-1,0,1];
+let colors = [
+    '#333',
+    '#555',
+    '#777',
+    '#999'
+];
 
 function draw(x,y,width,height,xMovement,yMovement,steps){
     context.beginPath();
     context.rect(x,y,width,height);
-    context.stroke();
+    context.fillStyle = colors[Math.floor(Math.random() * colors.length)]
+    context.fill();
 
     if(steps>= 0){
         let newSize = (startSize) * (steps / startSteps) + finalSize;
@@ -32,7 +39,7 @@ function draw(x,y,width,height,xMovement,yMovement,steps){
 
 for( var x = offset; x < size - offset; x += tileStep) {
     for( var y = offset; y < size - offset; y += tileStep) {
-        startSteps = Math.ceil(Math.random() * 3 + 2);
+        startSteps = Math.ceil(Math.random() * 3 + 3);
         var xDirection = directions[Math.floor(Math.random() * directions.length)]
         var yDirection = directions[Math.floor(Math.random() * directions.length)]
         draw(x, y, startSize, startSize, xDirection, yDirection, startSteps - 1);
