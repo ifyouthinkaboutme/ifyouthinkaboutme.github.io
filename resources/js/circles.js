@@ -12,8 +12,15 @@ context.lineWidth = 2;
 let circles = [];
 let minRadius = 2;
 let maxRadius = Math.floor(Math.random() * (size / 5) + (size / 10));
-let totalCircles = 500;
-let createCircleAttempts = 500;
+let totalCircles = 900;
+let createCircleAttempts = 100;
+
+let colors = [
+    '#111',
+    '#333',
+    '#555',
+    '#777',
+]
 
 function createAndDrawCircle() {
     // Loop through from 0 to createCircleAttempts

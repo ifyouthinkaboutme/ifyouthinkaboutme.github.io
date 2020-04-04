@@ -15,10 +15,10 @@ let tileStep = (size - offset * 2) / 7;
 let startSize = tileStep;
 let directions = [-1,0,1];
 let colors = [
-    '#333',
-    '#555',
-    '#777',
-    '#999'
+    '#e5562b',
+    '#f9931e',
+    '#F2D8B3',
+    '#c31e1e'
 ];
 
 function draw(x,y,width,height,xMovement,yMovement,steps){
