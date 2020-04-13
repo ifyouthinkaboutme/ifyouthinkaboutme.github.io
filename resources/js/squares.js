@@ -37,11 +37,11 @@ function draw(x,y,width,height,xMovement,yMovement,steps){
     }
 }
 
-for( var x = offset; x < size - offset; x += tileStep) {
-    for( var y = offset; y < size - offset; y += tileStep) {
+for( let x = offset; x < size - offset; x += tileStep) {
+    for( let y = offset; y < size - offset; y += tileStep) {
         startSteps = Math.ceil(Math.random() * 3 + 3);
-        var xDirection = directions[Math.floor(Math.random() * directions.length)]
-        var yDirection = directions[Math.floor(Math.random() * directions.length)]
+        let xDirection = directions[Math.floor(Math.random() * directions.length)]
+        let yDirection = directions[Math.floor(Math.random() * directions.length)]
         draw(x, y, startSize, startSize, xDirection, yDirection, startSteps - 1);
     }
 }
