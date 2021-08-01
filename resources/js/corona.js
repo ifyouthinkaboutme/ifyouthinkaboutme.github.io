@@ -35,7 +35,7 @@ async function getData() {
         }
         countries.push(country)
     }
-    draw();
+    animate();
 }
 
 function draw () {
@@ -45,20 +45,29 @@ function draw () {
 
     for (let i = 0; i < countries.length; i++) {
         context.beginPath();
-        context.arc(x, y, countries[i].population/10000, 0, Math.PI * 2, false);
-        context.strokeStyle = '#777'
+        context.arc(x, y, countries[i].confirmed/100, 0, Math.PI * 2, false);
         context.stroke();
 
         context.beginPath();
-        context.arc(x,y,countries[i].deaths/500,0, Math.PI * 2, false);
-        context.fillStyle = colors[Math.floor(Math.random() * colors.length)]
+        context.arc(x, y, countries[i].deaths/500, 0, Math.PI * 2, false);
         context.fill();
 
         y += step;
         x += step;
-
-        console.log(step);
     }
+}
+
+// Animate function definition
+function animate() {
+    requestAnimationFrame(animate);
+    
+    context.clearRect(0, 0, size, size);
+
+    // move circles
+    let temp = countries.pop();
+    countries.unshift(temp);
+    
+    draw();
 }
 
 getData();
