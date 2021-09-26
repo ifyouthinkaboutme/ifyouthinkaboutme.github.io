@@ -1,4 +1,4 @@
-const canvas = document.getElementById('anxiety');
+const canvas = document.getElementById('bubbles');
 const context = canvas.getContext('2d');
 
 const width = window.innerWidth - (window.innerWidth / 10) * 2;
@@ -6,7 +6,7 @@ const height = width;
 
 canvas.width = width;
 canvas.height = height;
-context.lineWidth = 2;
+context.lineWidth = 4;
 
 let circles = [];
 
@@ -55,8 +55,8 @@ for (i = 0; i < 100; i++) {
     let y = Math.random() * (height - radius * 2) + radius;
 
     // fixed velocity values
-    let dx = (Math.random() - 0.5) * 1;
-    let dy = (Math.random() - 0.5) * 1;
+    let dx = (Math.random() - 0.5) * 2;
+    let dy = (Math.random() - 0.5) * 2;
 
     // randomize color
     let color = Math.floor(Math.random() * 255);

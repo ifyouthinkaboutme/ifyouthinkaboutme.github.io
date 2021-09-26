@@ -1,4 +1,4 @@
-const canvas = document.getElementById('anxiety');
+const canvas = document.getElementById('squares');
 const context = canvas.getContext('2d');
 
 const size = window.innerWidth - (window.innerWidth / 10) * 2;
