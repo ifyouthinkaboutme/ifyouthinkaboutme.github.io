@@ -19,10 +19,13 @@ void main() {
     vec4 video1 = texture2D(tex0, st);
     vec4 video2 = texture2D(tex1, st);
 
-    //float pct = abs(sin(u_time));
-    float pct = texture2D(tex2,st).r;
+    float pct = abs(sin(u_time));
+    //float pct = texture2D(tex2,st).r;
 
-    vec3 color = mix(video1.rgb, video2.rgb, pct);
+    //vec3 color = mix(video1.rgb, video2.rgb, pct);
+
+    vec3 color = (video1.rgb + pct) * video2.rgb;
 
     gl_FragColor = vec4(color, 1.0);
+    //gl_FragColor = vec4(video1.rgb,video2.r);
 }
