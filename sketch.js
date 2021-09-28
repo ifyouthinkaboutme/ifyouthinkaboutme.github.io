@@ -11,10 +11,12 @@ function preload(){
 	vid1 = createVideo('videos/one.mp4');
 	vid1.hide();
 	vid1.loop();
+	vid1.volume(0);
 
 	vid2 = createVideo('videos/two.mp4');
 	vid2.hide();
 	vid2.loop();
+	vid2.volume(0);
 
 	shdr = loadShader('/shaders/shader.vert', '/shaders/shader.frag');
 }
